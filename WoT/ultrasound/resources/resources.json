@@ -1,0 +1,17 @@
+{
+  "pi": {
+    "name": "HC Sensor Pi",
+    "description": "A simple WoT-connected Raspberry PI for the WoT book.",
+    "port": 8488,
+    "sensors": {
+      "hc": {
+        "name": "US sensor",
+        "description": "A passive ultrasonic sensor. Send distance",
+        "value": 0,
+        "unit": "mm",
+        "trigger": 23,
+        "echo": 24
+      }
+    }
+  }
+}

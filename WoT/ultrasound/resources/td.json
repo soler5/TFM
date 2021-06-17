@@ -1,0 +1,31 @@
+{   
+    "title": "MyPirSensor",
+    "id": "urn:dev:ops:32473-WoTPirSensor-1234",
+    "securityDefinitions": {"nosec_sc": {"scheme": "nosec"}},
+    "security": ["nosec_sc"],
+    "properties": {
+        "distance": {
+          "type": "number",
+          "forms": [
+            {
+              "href": "http://192.168.0.37:8488/sensors/pir",
+              "op": ["readproperty"],
+              "contentType": "application/json"
+            }
+          ]
+        }
+      },
+    "events": {
+        "short-distance": {
+            "data":{"type": "json"},
+            "forms": [
+                {
+                    "href": "mqtt://192.168.0.37:1883",
+                    "contentType" : "text/plain",
+                    "op" : "subscribeevent"
+                }
+            ]
+        }
+    } 
+  }
+

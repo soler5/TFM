@@ -1,0 +1,15 @@
+{
+  "pi": {
+    "name": "WoT Pir sensor",
+    "description": "A simple pir sensor for WoT-connected Raspberry PI",
+    "port": 8486,
+    "sensors": {
+      "pir": {
+        "name": "Passive Infrared",
+        "description": "A passive infrared sensor. When 'true' someone is present.",
+        "value": true,
+        "gpio": 27
+      }
+    }
+  }
+}

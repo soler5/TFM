@@ -1,0 +1,28 @@
+{   
+    "title": "MyDHTSensor",
+    "id": "urn:dev:ops:32473-WoTDHTSensor-1234",
+    "securityDefinitions": {"nosec_sc": {"scheme": "nosec"}},
+    "security": ["nosec_sc"],
+    "properties": {
+        "temperature": {
+          "type": "number",
+          "forms": [
+            {
+              "href": "http://192.168.0.37:8485/sensors/temperature",
+              "op": ["readproperty"],
+              "contentType": "application/json"
+            }
+          ]
+        },
+        "humidity": {
+          "type": "number",
+          "forms": [
+            {
+              "href": "http://192.168.0.37:8485/sensors/humidity",
+              "op": ["readproperty"],
+              "contentType": "application/json"
+            }
+          ]
+        }
+      }
+  }

@@ -1,0 +1,48 @@
+{   
+    "title": "MyPirSensor",
+    "id": "urn:dev:ops:32473-WoTPirSensor-1234",
+    "securityDefinitions": {"nosec_sc": {"scheme": "nosec"}},
+    "security": ["nosec_sc"],
+    "properties": {
+      "status": {
+        "type": "boolean",
+        "forms": [
+          {
+            "href": "http://192.168.0.37:8487/actuators/led",
+            "op": ["readproperty"],
+            "contentType": "application/json"
+          }
+        ]
+      }
+    },
+    "actions": {
+      "encender" : {
+        "input":  {
+          "type": "json",
+          "properties": {
+            "value":true
+          }
+        },  
+        "forms": [{
+          "op": ["invokeaction"],
+          "href": "http://192.168.0.37:8487/actuators/led",
+          "contentType":"application/json",
+          "http:methodName": "PUT"
+        }]
+      },
+      "apagar" : {
+        "input":  {
+          "type": "json",
+          "properties": {
+            "value":false
+          }
+        }, 
+        "forms": [{
+          "op": ["invokeaction"],
+          "href": "http://192.168.0.37:8487/actuators/led",
+          "contentType":"application/json",
+          "http:methodName": "PUT"
+        }]
+    }
+  }
+  }
