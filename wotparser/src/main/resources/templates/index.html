@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Parser microservice</title>
+
+    <!--Bootstrap 4-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-12 mx-auto">
+            <h1>Carga del archivo de Configuración</h1>
+            <form method="POST" th:action="@{/parser}" enctype="multipart/form-data">
+                <div class="form-group mt-3">
+                    <label for="file">Seleciona un archivo TXT</label>
+                    <input type="file" name="file" class="form-control-file" id="file" accept=".txt">
+                </div>
+                <button type="submit" class="btn btn-primary">Importar Configuración</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
