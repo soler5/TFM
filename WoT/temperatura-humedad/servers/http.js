@@ -1,10 +1,10 @@
 // Final version
 var express = require('express'),
   sensorRoutes = require('./../routes/sensors'),
-  thingsRoutes = require('./../routes/things'),
   converter = require('./../middleware/converter'),
   cors = require('cors'),
   bodyParser = require('body-parser');
+  var td = require('./../resources/td.json');
 
 var app = express();
 
@@ -12,11 +12,10 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-app.use('/pi/sensors', sensorRoutes);
-app.use('/things', thingsRoutes);
+app.use('/sensors', sensorRoutes);
 
-app.get('/pi', function (req, res) {
-  res.send('This is the WoT-Pi for DHT sensor!')
+app.get('/', function (req, res) {
+  req.result = td; //#A
 });
 
 // For representation design

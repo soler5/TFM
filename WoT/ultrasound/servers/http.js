@@ -2,7 +2,7 @@
 var express = require('express'),
   sensorRoutes = require('./../routes/sensors'),
   converter = require('./../middleware/converter'),
-  cors = require('cors'),
+  cors = require('cors');
 
 var app = express();
 
