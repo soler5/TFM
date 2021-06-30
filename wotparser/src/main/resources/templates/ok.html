@@ -15,11 +15,12 @@
         <div class="col-12 mx-auto">
             <h1>Archivo generado con éxito</h1>
             <br>
-	        <form method="GET" th:action="@{/run}">
-                <button type="submit" class="btn btn-success btn-primary">Ejecutar proceso</button>
-            </form>
-            <br>
-	        <form method="GET" th:action="@{/download}">
+            <a href="/run">
+                <button type="button" class="btn btn-success btn-primary">Ejecutar proceso</button>
+            </a>
+                
+            <br><br>
+	        <form method="GET" th:action="@{/download}" runat="server">
                 <button type="submit" class="btn btn-info btn-primary">Descargar proceso</button>
             </form>
         </div>

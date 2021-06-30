@@ -8,7 +8,7 @@
           "type": "number",
           "forms": [
             {
-              "href": "http://192.168.0.37:8488/sensors/pir",
+              "href": "http://192.168.0.37:8488/sensors/distance",
               "op": ["readproperty"],
               "contentType": "application/json"
             }

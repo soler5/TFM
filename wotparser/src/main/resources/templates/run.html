@@ -14,9 +14,10 @@
     <div class="row">
         <div class="col-12 mx-auto">
             <h1>Proceso en ejecución</h1>
-            <form method="GET" th:action="@{/stop}">
-                <button type="submit" class="btn btn-danger btn-primary">Detener proceso</button>
-            </form>
+            <a href="/stop">
+                <button type="button" class="btn btn-danger btn-primary">Detener proceso</button>
+            </a>
+
         </div>
     </div>
 </div>
