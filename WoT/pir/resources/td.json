@@ -20,7 +20,6 @@
             "data":{
               "type": "integer",
               "description":"Devuelve un JSON con dos atributos: value y date. Value es un booleano que indica presencia y date contiene la fecha de la notificación"
-            }
             },
             "forms": [
                 {

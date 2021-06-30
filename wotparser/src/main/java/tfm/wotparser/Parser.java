@@ -579,7 +579,7 @@ public class Parser {
 		    				    		
 			    	writer.write(Parser.newsEndpoints(consecuentesAll, "consecuente"));    		
 		    		
-			       	writer.write(Parser.getMain(antecedentesAll,1));		    		
+			       	writer.write(Parser.getMain(antecedentesAll,0));		    		
 		    					    	
 			    	writer.write(Parser.getCallback(antecedentesAll, consecuentesAll, condicion));
 			    	
