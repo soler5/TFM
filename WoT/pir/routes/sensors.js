@@ -9,7 +9,7 @@ router.route('/').get(function (req, res, next) {
   next(); //#B
 });
 
-router.route('/pir').get(function (req, res, next) {
+router.route('/presence').get(function (req, res, next) {
   req.result = resources.pi.sensors.pir;
   next();
 });
