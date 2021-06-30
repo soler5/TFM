@@ -17,7 +17,10 @@
       },
     "events": {
         "short-distance": {
-            "data":{"type": "json"},
+            "data":{
+              "type": "json",
+              "description":"Devuelve un JSON con dos atributos: value y date. Value es un booleano que indica corta distancia y date contiene la fecha de la notificación"
+            },
             "forms": [
                 {
                     "href": "mqtt://192.168.0.37:1883",
