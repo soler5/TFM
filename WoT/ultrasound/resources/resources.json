@@ -8,7 +8,7 @@
         "name": "US sensor",
         "description": "A passive ultrasonic sensor. Send distance",
         "value": 0,
-        "unit": "mm",
+        "unit": "cm",
         "trigger": 23,
         "echo": 24
       }
